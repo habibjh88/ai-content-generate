@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/import/Modal.scss ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/open-ai/Modal.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 .dowp-main-modal {
   width: 1200px !important;
   max-width: 100% !important;
@@ -28,7 +28,7 @@
   }
 }
 .dowp-main-modal .components-modal__content {
-  margin-top: 72px;
+  margin-top: 68px;
 }
 .dowp-main-modal .dowp-modal-content-wrapper {
   flex: 1;
@@ -131,8 +131,8 @@
   transition: 0.2s;
 }
 .dowp-openai-modal-wrapper #layouts-blocks-list .response-button button:hover {
-  background: #4ABDAC;
-  border-color: #4ABDAC;
+  background: #1CAC78;
+  border-color: #1CAC78;
   color: #FFF;
 }
 .dowp-openai-modal-wrapper #layouts-blocks-list .response-text {
@@ -177,7 +177,7 @@
   justify-content: center;
   align-items: center;
   border: none;
-  background: #4ABDAC;
+  background: #1CAC78;
   box-shadow: none;
   color: #fff;
   position: relative;
@@ -185,7 +185,7 @@
   transition: 0.4s;
 }
 .dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button button:hover {
-  background: #2ead9a;
+  background: #0f9565;
 }
 .dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button button svg {
   width: 12px;
@@ -221,7 +221,7 @@
 .dowp-openai-modal-wrapper .message-input-wrapper input[type=text]:focus {
   box-shadow: none;
   outline: none;
-  border-color: #4ABDAC;
+  border-color: #1CAC78;
 }
 .dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill,
 .dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill:hover,
@@ -238,13 +238,13 @@
   padding: 0;
   border-radius: 0;
   border: none;
-  background: #4ABDAC;
+  background: #1CAC78;
   pointer-events: all;
   cursor: pointer;
   transition: 0.4s;
 }
 .dowp-openai-modal-wrapper .message-input-wrapper .text-submit:hover {
-  background: #2ead9a;
+  background: #0f9565;
 }
 .dowp-openai-modal-wrapper .message-input-wrapper .text-submit svg {
   transform: translateY(-1px);
@@ -407,7 +407,7 @@ html .editor-styles-wrapper .dowp-is-root-container.wp-block {
 }
 
 .edit-post-header__toolbar .dowp-import-button-wrapper button.open-ai-button {
-  background: #4ABDAC;
+  background: #1CAC78;
   color: #ffffff;
   border: none;
   min-height: 33px;
@@ -423,7 +423,7 @@ html .editor-styles-wrapper .dowp-is-root-container.wp-block {
   gap: 7px;
 }
 .edit-post-header__toolbar .dowp-import-button-wrapper button.open-ai-button:hover {
-  background: #2ead9a;
+  background: #0f9565;
 }
 
 /*# sourceMappingURL=main.css.map*/

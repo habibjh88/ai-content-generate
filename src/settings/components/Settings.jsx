@@ -82,6 +82,9 @@ const Settings = () => {
                 onFinish={getFormData}
                 onFinishFailed=""
             >
+                    <Form.Item>
+                        <h2>AI Content Settings</h2>
+                    </Form.Item>
                 <Form.Item
                     label="OpenAI API Secret Key"
                 >

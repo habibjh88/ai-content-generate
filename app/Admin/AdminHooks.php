@@ -7,30 +7,7 @@ class AdminHooks {
 	public function __construct() {
 		add_action( 'admin_menu', [ __CLASS__, 'register_menu' ] );
 		add_action( 'in_admin_header', [ __CLASS__, 'remove_all_notices' ], 9999 );
-		add_action( 'edit_form_after_title', [ __CLASS__, 'print_switch_mode_button' ] );
 	}
-
-	public static function print_switch_mode_button( $post ) {
-		// Exit if Gutenberg are active.
-		if ( did_action( 'enqueue_block_editor_assets' ) ) {
-//			return;
-		}
-
-		?>
-            <button>Hello</button>
-        <div id="elementor-switch-mode">
-            <button id="elementor-switch-mode-button" type="button" class="button button-primary button-hero">
-
-                <span class="elementor-switch-mode-off">
-					<i class="eicon-elementor-square" aria-hidden="true"></i>
-					<?php echo esc_html__( 'Edit with Elementor', 'elementor' ); ?>
-				</span>
-            </button>
-        </div>
-
-		<?php
-	}
-
 
 	public static function register_menu() {
 		add_menu_page(
@@ -48,7 +25,6 @@ class AdminHooks {
 //		require_once trailingslashit(AI_CONTENT_PLUGIN_PATH) . 'views/html-admin-ai-content-generates.php';
 	?>
 		<div class="wrap ai-content-generate-wrap">
-			<h2><?php esc_html_e('Settings', 'ai-content-generate'); ?></h2>
 			<div id="ai-content-generate-app"></div>
 		</div>
 <?php

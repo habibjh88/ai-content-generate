@@ -1,3 +1,6 @@
+$primary_color: #1CAC78;
+$secondary_color: #0f9565;
+
 .ant-notification {
     z-index: 999999 !important;
 }
@@ -22,204 +25,10 @@
     }
 }
 
-.ai-content-generate-table {
-    table {
-        border-radius: 0;
-
-        .ant-table-thead {
-            th:nth-child(1) {
-                width: 30%;
-            }
-
-            th:nth-child(4) {
-                width: 18%;
-            }
-
-            .actions-column {
-                width: 16%;
-            }
-
-            th:nth-child(2),
-            th:nth-child(3),
-            th:nth-child(5) {
-                width: 12%;
-            }
-        }
-    }
-
-    .ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar {
-        display: none;
-    }
-
-    .ant-table-wrapper .ant-table-container table > thead > tr:first-child > *:last-child {
-        border-start-end-radius: 0;
-    }
-
-    .ant-table-wrapper .ant-table-container table > thead > tr:first-child > *:first-child {
-        border-start-start-radius: 0;
-    }
-
-    tbody {
-        .status-column {
-            text-transform: capitalize;
-            position: relative;
-            text-indent: -9999px;
-
-            &:after {
-                content: attr(data-title);
-                position: absolute;
-                top: 15px;
-                display: inline-block;
-                line-height: 1;
-                padding: 4px 8px 6px;
-                color: #ffffff;
-                margin: 0;
-                border-radius: 3px;
-                font-size: 12px;
-                text-indent: 0;
-                left: 17px;
-            }
-        }
-    }
-
-    tr.claim-approved-row {
-        .status-column {
-            &:after {
-                background-color: #00b578;
-            }
-        }
-    }
-
-    tr.claim-pending-row {
-        .status-column {
-            &:after {
-                background-color: #ff8f1f;
-            }
-        }
-    }
-
-    tr.claim-cancelled-row {
-        .status-column {
-            &:after {
-                background-color: #ff3141;
-            }
-        }
-    }
-
-    .ant-pagination {
-        text-align: right;
-        margin-top: 30px;
-
-        .ant-pagination-prev button,
-        .ant-pagination-next button,
-        .ant-pagination-item {
-            border-color: #4096ff;
-            border-radius: 3px;
-
-            a {
-                color: inherit;
-            }
-
-            &.ant-pagination-item-active,
-            &:hover {
-                background-color: #4096ff;
-                color: #fff;
-            }
-
-            &:focus {
-                outline: none;
-            }
-
-        }
-
-    }
-
-    .ant-tabs-nav {
-        margin-bottom: 20px;
-
-        &:before {
-            border: none;
-        }
-
-        .ant-tabs-nav-wrap {
-            overflow: initial;
-
-            .ant-tabs-tab {
-                background-color: #ffffff;
-                color: rgba(0, 0, 0, 0.88);
-                font-size: 15px;
-                font-weight: 500;
-                padding: 12px 25px;
-                line-height: 1;
-                border-radius: 0;
-
-                & + .ant-tabs-tab {
-                    margin-left: 10px;
-                }
-
-                &.ant-tabs-tab-active {
-                    position: relative;
-                    background-color: #1677ff;
-                    color: #ffffff;
-
-                    .ant-tabs-tab-btn {
-                        color: inherit;
-                    }
-
-                    /*&:before {
-                      content: "";
-                      position: absolute;
-                      bottom: -8px;
-                      left: 50%;
-                      margin-left: -8px;
-                      width: 16px;
-                      height: 16px;
-                      background-color: #1677ff;
-                      z-index: 999;
-                      transform: rotate(45deg);
-                    }*/
-
-                }
-            }
-        }
-    }
-
-}
-
 .ai-content-generate-update-form {
     .ant-form-item {
         .ant-form-item-label {
             text-align: start;
-        }
-    }
-
-    .claim-update-button {
-        position: relative;
-        padding: 7px 15px;
-        height: auto;
-        box-shadow: none;
-
-        &.loading {
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        & > span {
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .ant-spin {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            color: #ffffff;
-
-            .anticon-spin {
-                margin-top: 5px;
-            }
         }
     }
 }
@@ -249,6 +58,11 @@
             padding: 7px 15px;
             height: auto;
             box-shadow: none;
+            background: $primary_color;
+
+            &:hover {
+                background: $secondary_color;
+            }
 
             &.loading {
                 cursor: not-allowed;

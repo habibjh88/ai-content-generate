@@ -17,8 +17,8 @@
     }
 }
 
-$chatgpt_primary: #4ABDAC;
-$chatgpt_secondary: #2ead9a;
+$chatgpt_primary: #1CAC78;
+$chatgpt_secondary: #0f9565;
 $light_color: #e8efee;
 
 .dowp-main-modal {
@@ -49,7 +49,7 @@ $light_color: #e8efee;
     }
 
     .components-modal__content {
-        margin-top: 72px;
+        margin-top: 68px;
     }
 
     .dowp-modal-content-wrapper {
@@ -295,7 +295,7 @@ $light_color: #e8efee;
             padding: 0;
             border-radius: 0;
             border: none;
-            background: #4ABDAC;
+            background: $chatgpt_primary;
             pointer-events: all;
             cursor: pointer;
             transition: 0.4s;

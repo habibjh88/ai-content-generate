@@ -1,7 +1,7 @@
 /* global wp */
 const {__} = wp.i18n;
 const {render} = wp.element;
-import ImportLayout from './import/ImportLayout'
+import ImportLayout from './open-ai/ImportLayout'
 wp.domReady(function () {
     setTimeout(function () {
 
