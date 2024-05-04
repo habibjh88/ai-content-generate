@@ -1,0 +1,429 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/import/Modal.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+.dowp-main-modal {
+  width: 1200px !important;
+  max-width: 100% !important;
+  height: 700px !important;
+  max-height: 80% !important;
+}
+.dowp-main-modal .components-modal__header {
+  background: #e8efee;
+  padding-top: 8px;
+  height: 72px;
+}
+.dowp-main-modal .components-modal__header .components-button {
+  border-radius: 50%;
+}
+.dowp-main-modal .components-modal__header .components-button:hover {
+  border-color: #F00;
+  color: #F00;
+}
+.dowp-main-modal .components-base-control {
+  margin-top: 6px;
+}
+@media (min-width: 1500px) {
+  .dowp-main-modal .components-base-control {
+    margin-top: 12px;
+  }
+}
+.dowp-main-modal .components-modal__content {
+  margin-top: 72px;
+}
+.dowp-main-modal .dowp-modal-content-wrapper {
+  flex: 1;
+  padding-right: 30px;
+}
+.dowp-main-modal .dowp-layout-modal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  display: flex;
+  z-index: 99999;
+  background: linear-gradient(90deg, #4F13FF 0%, #7A1FFC 100%);
+  color: #ffffff;
+}
+.dowp-main-modal .dowp-layout-modal-header .dowp-modal-close-wrapper {
+  position: absolute;
+  background-color: #914DFF;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 0;
+  border: none;
+  right: 40px;
+  top: 49%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: 300ms;
+  padding: 0;
+}
+.dowp-main-modal .dowp-layout-modal-header .dowp-modal-close-wrapper:focus, .dowp-main-modal .dowp-layout-modal-header .dowp-modal-close-wrapper:hover {
+  background-color: #ff0000;
+  outline: none;
+}
+.dowp-main-modal .dowp-layout-modal-header .dowp-modal-close-wrapper svg {
+  position: relative;
+  top: -2px;
+}
+
+.dowp-openai-modal-wrapper.need-pro select,
+.dowp-openai-modal-wrapper.need-pro input {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.dowp-openai-modal-wrapper .dowp-modal-sidebar-content {
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+}
+.dowp-openai-modal-wrapper .dowp-modal-sidebar-content h3 {
+  margin-top: 0;
+}
+.dowp-openai-modal-wrapper .dowp-modal-sidebar-content label {
+  font-size: 13px !important;
+  text-transform: inherit !important;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-sidebar {
+  width: 280px;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-sidebar .components-input-control__container {
+  border-radius: 0;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-sidebar .components-input-control__container *:focus {
+  outline: none !important;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-sidebar .components-input-control__container select {
+  height: 34px !important;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-sidebar .components-input-control__backdrop {
+  border-color: #d3dddb !important;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list {
+  padding: 0;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list > div {
+  position: relative;
+  overflow: hidden;
+  padding-right: 2px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-button button {
+  background: #e8efee;
+  padding: 0 11px;
+  height: 27px;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border: 1px solid #d5dddc;
+  font-size: 13px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-button button:hover {
+  background: #4ABDAC;
+  border-color: #4ABDAC;
+  color: #FFF;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text {
+  display: flex;
+  gap: 15px;
+  padding: 17px 15px;
+  border: 1px solid #d3dddb;
+  border-radius: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text:not(:last-child) {
+  margin-bottom: 30px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .label {
+  flex: 0 0 24px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text {
+  position: relative;
+  flex: 1;
+  padding-top: 22px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text.has-error .text {
+  padding-top: 0;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button button {
+  display: inline-flex;
+  gap: 5px;
+  padding: 0 12px;
+  margin: 2px;
+  line-height: 24px;
+  font-size: 12px;
+  vertical-align: top;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #4ABDAC;
+  box-shadow: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button button:hover {
+  background: #2ead9a;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text .action-button button svg {
+  width: 12px;
+  height: 12px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .text strong {
+  font-weight: bold;
+  transform: translateY(-3px);
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+}
+.dowp-openai-modal-wrapper #layouts-blocks-list .response-text .label img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper {
+  position: sticky !important;
+  top: 0;
+  padding-top: 20px;
+  z-index: 10;
+  background: #FFF;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper input[type=text] {
+  height: 50px;
+  border: 1px solid #d3dddb;
+  padding-left: 15px;
+  padding-right: 44px;
+  border-radius: 0;
+  background: #FFF !important;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper input[type=text]:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #4ABDAC;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill,
+.dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill:hover,
+.dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill:focus,
+.dowp-openai-modal-wrapper .message-input-wrapper input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f3f9f8 inset !important;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper .text-submit {
+  position: absolute;
+  top: 42px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: #4ABDAC;
+  pointer-events: all;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper .text-submit:hover {
+  background: #2ead9a;
+}
+.dowp-openai-modal-wrapper .message-input-wrapper .text-submit svg {
+  transform: translateY(-1px);
+  width: 15px;
+  height: 15px;
+}
+.dowp-openai-modal-wrapper .dowp-layout-modal-header .dowp-modal-close-wrapper {
+  right: 20px;
+  border-radius: 50%;
+}
+.dowp-openai-modal-wrapper .components-select-control .components-input-control__suffix,
+.dowp-openai-modal-wrapper .components-select-control .components-input-control__suffix * {
+  pointer-events: none !important;
+}
+.dowp-layout-header-inner {
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  flex-grow: 1;
+  padding-left: 24px;
+  padding-right: 50px;
+}
+.dowp-layout-header-inner button {
+  display: flex !important;
+  align-items: center;
+  pointer-events: none;
+  padding: 19px 15px !important;
+  justify-content: center;
+  gap: 12px;
+  padding-left: 0 !important;
+  line-height: 1 !important;
+}
+.dowp-layout-header-inner button:not(.dowp-modal-close-wrapper) {
+  display: inline-block;
+  line-height: 25px;
+  padding: 30px 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 1px 0 0;
+  border-radius: 0;
+  transition: color 300ms, background-color 300ms;
+  color: #96b2ef;
+}
+.dowp-layout-header-inner button:not(.dowp-modal-close-wrapper):focus, .dowp-layout-header-inner button:not(.dowp-modal-close-wrapper):hover, .dowp-layout-header-inner button:not(.dowp-modal-close-wrapper).active {
+  color: #fff;
+  background: none;
+  outline: none;
+}
+
+#layouts-blocks-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px 35px 10px;
+}
+#layouts-blocks-list > div:not(.cat-block-item) {
+  width: 100%;
+}
+
+.dowp-modal-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column,
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item {
+  flex: 1 1 100%;
+  max-width: 100%;
+  padding: 10px;
+}
+@media (min-width: 860px) {
+  .dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column,
+  .dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column,
+  .dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item {
+    flex: 1 1 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column .dowp-layout-image-wrap,
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item .dowp-layout-image-wrap {
+  position: relative;
+  padding-top: 129%;
+}
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column .dowp-layout-image-wrap .lazy-load-image-loaded,
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .dowp-layout-column .dowp-layout-image-wrap img,
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item .dowp-layout-image-wrap .lazy-load-image-loaded,
+.dowp-modal-inner.modal-layout #layouts-blocks-list > .cat-block-item .dowp-layout-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  transition: 3s;
+}
+
+html .editor-styles-wrapper .dowp-is-root-container.wp-block {
+  max-width: 100%;
+}
+
+.chat-bubble {
+  display: inline-block;
+}
+.chat-bubble .typing {
+  align-items: center;
+  display: flex;
+  height: 28px;
+  padding-top: 15px;
+  margin-left: 4px;
+}
+.chat-bubble .typing .dot {
+  animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+  background-color: #6CAD96;
+  border-radius: 50%;
+  height: 7px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 7px;
+  display: inline-block;
+}
+.chat-bubble .typing .dot:nth-child(1) {
+  animation-delay: 200ms;
+}
+.chat-bubble .typing .dot:nth-child(2) {
+  animation-delay: 300ms;
+}
+.chat-bubble .typing .dot:nth-child(3) {
+  animation-delay: 400ms;
+}
+.chat-bubble .typing .dot:last-child {
+  margin-right: 0;
+}
+
+@keyframes mercuryTypingAnimation {
+  0% {
+    transform: translateY(0px);
+    background-color: #6CAD96;
+  }
+  28% {
+    transform: translateY(-7px);
+    background-color: #9ECAB9;
+  }
+  44% {
+    transform: translateY(0px);
+    background-color: #B5D9CB;
+  }
+}
+#ct-container {
+  z-index: 999999 !important;
+}
+
+.edit-post-header__toolbar .dowp-import-button-wrapper button.open-ai-button {
+  background: #4ABDAC;
+  color: #ffffff;
+  border: none;
+  min-height: 33px;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.edit-post-header__toolbar .dowp-import-button-wrapper button.open-ai-button:hover {
+  background: #2ead9a;
+}
+
+/*# sourceMappingURL=main.css.map*/

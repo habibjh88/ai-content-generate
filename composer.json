@@ -1,0 +1,17 @@
+{
+    "name": "devofwp/ai-content-generate",
+    "autoload": {
+        "psr-4": {
+            "DOWP\\AiContentGenerate\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DevOfWP",
+            "email": "admin@devofwp.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*"
+    }
+}

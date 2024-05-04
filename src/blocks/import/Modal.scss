@@ -1,0 +1,517 @@
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+}
+
+$chatgpt_primary: #4ABDAC;
+$chatgpt_secondary: #2ead9a;
+$light_color: #e8efee;
+
+.dowp-main-modal {
+    width: 1200px !important;
+    max-width: 100% !important;
+    height: 700px !important;
+    max-height: 80% !important;
+
+    .components-modal__header {
+        background: $light_color;
+        padding-top: 8px;
+        height: 72px;
+        .components-button {
+            //border: 1px solid transparent;
+            border-radius: 50%;
+            &:hover {
+                border-color: #F00;
+                color: #F00;
+            }
+        }
+    }
+
+    .components-base-control {
+        margin-top: 6px;
+        @media (min-width: 1500px){
+            margin-top: 12px;
+        }
+    }
+
+    .components-modal__content {
+        margin-top: 72px;
+    }
+
+    .dowp-modal-content-wrapper {
+        flex: 1;
+        padding-right: 30px;
+    }
+
+    .dowp-layout-modal-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        z-index: 99999;
+        background: linear-gradient(90deg, #4F13FF 0%, #7A1FFC 100%);
+        color: #ffffff;
+
+
+        .dowp-modal-close-wrapper {
+            position: absolute;
+            background-color: #914DFF;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 0;
+            border: none;
+            right: 40px;
+            top: 49%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            transition: 300ms;
+            padding: 0;
+
+            &:focus,
+            &:hover {
+                background-color: #ff0000;
+                outline: none;
+            }
+
+            svg {
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+}
+
+.dowp-openai-modal-wrapper {
+
+    &.need-pro {
+        select,
+        input {
+            pointer-events: none;
+            opacity: .8;
+        }
+    }
+
+    .dowp-modal-sidebar-content {
+        padding-top: 20px;
+        position: sticky;
+        top: 0;
+        h3 {
+            margin-top: 0;
+        }
+        label {
+            font-size: 13px !important;
+            text-transform: inherit !important;
+        }
+    }
+
+    .dowp-layout-modal-sidebar {
+        width: 280px;
+        .components-input-control__container {
+            border-radius: 0;
+            *:focus {
+                outline: none !important;
+            }
+            select {
+                height: 34px !important;
+            }
+        }
+        .components-input-control__backdrop {
+            border-color: #d3dddb !important;
+        }
+
+    }
+
+    #layouts-blocks-list {
+        padding: 0;
+
+        > div {
+            position: relative;
+            overflow: hidden;
+            padding-right: 2px;
+        }
+
+        .response-button {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+
+            button {
+                background: #e8efee;
+                padding: 0 11px;
+                height: 27px;
+                line-height: 1;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                border: 1px solid #d5dddc;
+                font-size: 13px;
+                color: #000;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover {
+                    background: $chatgpt_primary;
+                    border-color: $chatgpt_primary;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .response-text {
+            display: flex;
+            gap: 15px;
+            padding: 17px 15px;
+            border: 1px solid #d3dddb;
+            border-radius: 0;
+            overflow-y: auto;
+            height: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            .label {
+                flex: 0 0 24px;
+            }
+
+            .text {
+                position: relative;
+                flex: 1;
+                padding-top: 22px;
+            }
+
+            &.has-error .text {
+                padding-top: 0;
+            }
+
+            .text .action-button {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                button {
+                    display: inline-flex;
+                    gap: 5px;
+                    padding: 0 12px;
+                    margin: 2px;
+                    line-height: 24px;
+                    font-size: 12px;
+                    vertical-align: top;
+                    border-radius: 0;
+                    text-decoration: none;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background: $chatgpt_primary;
+                    box-shadow: none;
+                    color: #fff;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background: $chatgpt_secondary
+                    }
+
+                    svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+
+            }
+
+            .text strong {
+                font-weight: bold;
+                transform: translateY(-3px);
+                position: relative;
+                display: inline-block;
+                font-size: 15px;
+            }
+
+            .label img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+            }
+
+        }
+    }
+
+    .message-input-wrapper {
+        position: sticky !important;
+        top: 0;
+        padding-top: 20px;
+        z-index: 10;
+        background: #FFF;
+
+        input[type=text] {
+            height: 50px;
+            border: 1px solid #d3dddb;
+            padding-left: 15px;
+            padding-right: 44px;
+            border-radius: 0;
+            background: #FFF !important;
+
+            &:focus{
+                box-shadow: none;
+                outline: none;
+                border-color: $chatgpt_primary;
+            }
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px #f3f9f8 inset !important;
+        }
+
+        .text-submit {
+            position: absolute;
+            top: 42px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            border-radius: 0;
+            border: none;
+            background: #4ABDAC;
+            pointer-events: all;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                background: $chatgpt_secondary;
+            }
+
+            svg {
+                transform: translateY(-1px);
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    .dowp-layout-modal-header .dowp-modal-close-wrapper {
+        right: 20px;
+        border-radius: 50%;
+    }
+
+    .components-select-control .components-input-control__suffix,
+    .components-select-control .components-input-control__suffix * {
+        pointer-events: none !important;
+    }
+
+    .message-input-wrapper {
+
+    }
+}
+
+//template list header
+
+.dowp-layout-header-inner {
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    flex-grow: 1;
+    padding-left: 24px;
+    padding-right: 50px;
+
+    button {
+        display: flex !important;
+        align-items: center;
+        pointer-events: none;
+        padding: 19px 15px !important;
+        justify-content: center;
+        gap: 12px;
+        padding-left: 0 !important;
+        line-height: 1 !important;
+    }
+
+    button:not(.dowp-modal-close-wrapper) {
+        display: inline-block;
+        line-height: 25px;
+        padding: 30px 15px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 0 1px 0 0;
+        border-radius: 0;
+        transition: color 300ms, background-color 300ms;
+        color: #96b2ef;
+
+        &:focus,
+        &:hover,
+        &.active {
+            color: #fff;
+            background: none;
+            outline: none;
+        }
+    }
+}
+
+
+#layouts-blocks-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 35px 10px;
+
+    > div:not(.cat-block-item) {
+        width: 100%;
+    }
+
+}
+
+
+.dowp-modal-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    &.modal-layout {
+
+
+        #layouts-blocks-list > .dowp-layout-column,
+        #layouts-blocks-list > .cat-block-item {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 10px;
+
+            @media (min-width: 860px) {
+                flex: 1 1 50%;
+                max-width: 50%;
+            }
+
+            @media (min-width: 1200px) {
+                flex: 1 1 33.3333%;
+                max-width: 33.3333%;
+            }
+
+            .dowp-layout-image-wrap {
+                position: relative;
+                padding-top: 129%;
+
+                .lazy-load-image-loaded,
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 0 0;
+                    transition: 3s;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+html .editor-styles-wrapper .dowp-is-root-container.wp-block {
+    max-width: 100%;
+}
+
+
+.chat-bubble {
+    display: inline-block;
+
+    .typing {
+        align-items: center;
+        display: flex;
+        height: 28px;
+        padding-top: 15px;
+        margin-left: 4px;
+    }
+
+    .typing .dot {
+        animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+        background-color: #6CAD96; //rgba(20,105,69,.7);
+        border-radius: 50%;
+        height: 7px;
+        margin-right: 4px;
+        vertical-align: middle;
+        width: 7px;
+        display: inline-block;
+    }
+
+    .typing .dot:nth-child(1) {
+        animation-delay: 200ms;
+    }
+
+    .typing .dot:nth-child(2) {
+        animation-delay: 300ms;
+    }
+
+    .typing .dot:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .typing .dot:last-child {
+        margin-right: 0;
+    }
+}
+
+
+@keyframes mercuryTypingAnimation {
+    0% {
+        transform: translateY(0px);
+        background-color: #6CAD96;
+    }
+    28% {
+        transform: translateY(-7px);
+        background-color: #9ECAB9;
+    }
+    44% {
+        transform: translateY(0px);
+        background-color: #B5D9CB;
+    }
+}
+
+#ct-container {
+    z-index: 999999 !important;
+}
+
+.edit-post-header__toolbar .dowp-import-button-wrapper button.open-ai-button {
+    background: $chatgpt_primary;
+    color: #ffffff;
+    border: none;
+    min-height: 33px;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    &:hover {
+        background: $chatgpt_secondary;
+    }
+}
