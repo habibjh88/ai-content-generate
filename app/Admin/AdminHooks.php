@@ -28,7 +28,7 @@ class AdminHooks {
 			'ai-content-generate-settings',
 			[ __CLASS__, 'ai_content_settings' ],
 			AI_CONTENT_PLUGIN_URL . '/assets/img/icon.svg',
-			6
+			100
 		);
 	}
 

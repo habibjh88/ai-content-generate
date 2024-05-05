@@ -43,9 +43,6 @@ $light_color: #e8efee;
 
     .components-base-control {
         margin-top: 6px;
-        @media (min-width: 1500px){
-            margin-top: 12px;
-        }
     }
 
     .components-modal__content {
@@ -144,7 +141,7 @@ $light_color: #e8efee;
         > div {
             position: relative;
             overflow: hidden;
-            padding-right: 2px;
+            padding-right: 2px !important;
         }
 
         .response-button {
@@ -260,7 +257,7 @@ $light_color: #e8efee;
     .message-input-wrapper {
         position: sticky !important;
         top: 0;
-        padding-top: 20px;
+        padding: 20px 0 0 !important;
         z-index: 10;
         background: #FFF;
 
