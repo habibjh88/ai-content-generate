@@ -77,8 +77,6 @@ if ((!process.env.npm_config_block && !process.env.npm_config_package) && (proce
 // mix.js(`src/js/settings-admin.js`, `assets/js/settings-admin.js`).react();
 
 
-
-
 if (process.env.npm_config_package) {
     mix.then(function () {
         const copyTo = path.resolve(`${temDirectory}/${package_slug}`);
@@ -87,8 +85,6 @@ if (process.env.npm_config_package) {
             'app',
             'assets',
             'languages',
-            'resources',
-            'templates',
             'vendor',
             'index.html',
             'README.txt',

@@ -2,8 +2,9 @@
 
 namespace DOWP\AiContentGenerate\Controllers;
 
-use DOWP\AiContentGenerate\Helpers\Fns;
-
+/**
+ * BlocksController class
+ */
 class BlocksController {
 
 	/**
@@ -11,6 +12,9 @@ class BlocksController {
 	 */
 	private $version;
 
+	/**
+	 * Class Constructor
+	 */
 	public function __construct() {
 		$this->version = defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : AI_CONTENT_VERSION;
 		add_action( 'enqueue_block_editor_assets', [ $this, 'editor_assets' ] );
@@ -18,6 +22,7 @@ class BlocksController {
 
 	/**
 	 * Load Editor Assets
+	 *
 	 * @return void
 	 */
 	public function editor_assets() {
@@ -36,8 +41,8 @@ class BlocksController {
 		//Block editor css
 
 		//Main compile css and js file
-		wp_enqueue_style( 'dowp-blocks-css', dwpAIC()->get_assets_uri( 'blocks/main.css' ), '', $this->version );
-		wp_enqueue_script( 'dowp-blocks-js', dwpAIC()->get_assets_uri( 'blocks/main.js' ), $dependency, $version, true );
+		wp_enqueue_style( 'dowp-blocks-css', dowpAIC()->get_assets_uri( 'blocks/main.css' ), '', $this->version );
+		wp_enqueue_script( 'dowp-blocks-js', dowpAIC()->get_assets_uri( 'blocks/main.js' ), $dependency, $version, true );
 
 		global $pagenow;
 		$editor_type = 'edit-post';

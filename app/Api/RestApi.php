@@ -2,11 +2,19 @@
 
 namespace DOWP\AiContentGenerate\Api;
 
+/**
+ * RestApi Class
+ */
 class RestApi {
 	public function __construct() {
 		add_action( "rest_api_init", [ $this, 'register_post_route' ] );
 	}
 
+	/**
+	 * Rest API Callback
+	 *
+	 * @return void
+	 */
 	public function register_post_route() {
 		register_rest_route( 'dowp/v1', 'chatgpt', [
 			'methods'             => 'POST',
@@ -17,6 +25,13 @@ class RestApi {
 		] );
 	}
 
+	/**
+	 * ChatGPT callback
+	 *
+	 * @param $data
+	 *
+	 * @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
+	 */
 	public function chatgpt_callback( $data ) {
 		$settings = get_option( 'dowp_aicg_settings' );
 
@@ -74,7 +89,7 @@ class RestApi {
 
 		$url = 'https://api.openai.com/v1/chat/completions';
 
-		$data = json_encode( [
+		$data = wp_json_encode( [
 			'max_tokens'  => intval( $max_tokens ), // Adjust this based on your needs
 			'model'       => $model,
 			"messages"    => [

@@ -18,11 +18,11 @@ use DOWP\AiContentGenerate\Controllers\BlocksController;
 use DOWP\AiContentGenerate\Controllers\ScriptController;
 use DOWP\AiContentGenerate\Admin\AdminHooks;
 
-if ( ! class_exists( dwpAIC::class ) ) {
+if ( ! class_exists( dowpAIC::class ) ) {
 	/**
 	 * Main initialization class.
 	 */
-	final class dwpAIC {
+	final class dowpAIC {
 
 
 		/**
@@ -72,16 +72,6 @@ if ( ! class_exists( dwpAIC::class ) ) {
 			return untrailingslashit( plugin_dir_path( AI_CONTENT_PLUGIN_FILE ) );
 		}
 
-		/**
-		 * Plugin template path
-		 *
-		 * @return string
-		 */
-		public function plugin_template_path() {
-			$plugin_template = $this->plugin_path() . '/templates/';
-
-			return apply_filters( 'tlp_tpg_template_path', $plugin_template );
-		}
 
 		/**
 		 * Default template path
@@ -123,28 +113,17 @@ if ( ! class_exists( dwpAIC::class ) ) {
 			return trailingslashit( AI_CONTENT_PLUGIN_URL . '/assets' ) . $file;
 		}
 
-
-		/**
-		 * Get the template path.
-		 *
-		 * @return string
-		 */
-		public function get_template_path() {
-			return apply_filters( 'dowp_template_path', 'ai-content-generate/' );
-		}
-
-
 	}
 
 	/**
 	 * Function for external use.
 	 *
-	 * @return dwpAIC
+	 * @return dowpAIC
 	 */
-	function dwpAIC() {
-		return dwpAIC::getInstance();
+	function dowpAIC() {
+		return dowpAIC::getInstance();
 	}
 
 	// Init app.
-	dwpAIC();
+	dowpAIC();
 }
